@@ -3,6 +3,11 @@
   
 #How to run?
   -you can clone this repository and run (npm i) in your node.js
+      after instalation dependencies you have 3 scripts,
+            -start - starting dev server
+            -prod - bundle js css and html to dist folder in production version
+            -dev - bundle js and html to dev folder in development version
+            
   -if you don't want install this you can just look on dist folder
   
 #How it's working?
