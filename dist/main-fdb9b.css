@@ -1,0 +1,148 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&family=Tapestry&display=swap);
+body {
+   margin: 0 20px;
+   font-family: "Roboto Flex", sans-serif;
+   overflow-x: hidden;
+   background-color: rgb(185, 185, 185);
+}
+
+input:focus,
+textarea:focus {
+   outline: none;
+   box-shadow: none;
+   border: 2px solid rgb(0, 174, 255);
+}
+
+section {
+   display: flex;
+   justify-content: space-between;
+   width: 100vw;
+   height: 100vh;
+}
+
+section > div {
+   width: 48%;
+}
+
+section input,
+section textarea {
+   width: 99%;
+   margin-bottom: 20px;
+   background-color: rgb(185, 185, 185);
+   resize: vertical;
+   outline: none;
+   border: none;
+   box-shadow: inset 0.1em 0.1em 0.5em -0.2em black;
+}
+
+section textarea {
+   height: 150px;
+}
+
+section input {
+   height: 40px;
+}
+
+.left p {
+   margin-bottom: 0;
+   color: rgb(0, 0, 0);
+}
+
+.left .main {
+   width: 100%;
+}
+
+.right {
+   position: relative;
+   left: -20px;
+   overflow-y: auto;
+   overflow-x: hidden;
+}
+
+.task {
+   margin: 30px auto 0 auto;
+   width: 90%;
+   box-shadow: inset 0.1em 0.1em 0.5em -0.2em black;
+   background-color: rgb(177, 177, 177);
+   border-radius: 2%;
+   overflow: hidden;
+   animation: animate 1s 0s both alternate;
+   padding: 10px 20px;
+}
+
+.task-contener {
+   margin: 1.2rem;
+   height: 170px;
+}
+
+.task header {
+   display: flex;
+   justify-content: space-between;
+}
+
+.task h2 {
+   margin: 2rem 0;
+}
+
+.editBtn,
+.delBtn {
+   width: 30px;
+   height: 30px;
+   padding: 0;
+   background-color: rgba(240, 248, 255, 0);
+   border: none;
+   cursor: pointer;
+}
+
+button i {
+   font-size: 22px;
+   color: black;
+   width: 100%;
+   height: 100%;
+}
+
+.edit {
+   height: 390px;
+}
+
+.addTask,
+.canel,
+.save {
+   width: 100px;
+   height: 40px;
+   font-size: 18px;
+   background-color: whitesmoke;
+   border: 2px solid black;
+   border-radius: 5%;
+   transition: 0.1s background-color;
+}
+
+.addTask {
+   float: right;
+}
+
+.canel {
+   margin-left: 10px;
+   color: silver;
+   border: 2px solid silver;
+}
+
+.editBtn {
+   margin-right: 10px;
+}
+
+.addTask:active,
+.save:active {
+   background-color: rgb(221, 221, 221);
+}
+
+@keyframes animate {
+   0% {
+      transform: translate(0, -40px);
+   }
+
+   100% {
+      transform: translate(0);
+   }
+}
+
