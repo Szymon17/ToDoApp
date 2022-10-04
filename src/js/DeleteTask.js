@@ -1,29 +1,29 @@
 export class DeleteTask {
-   constructor(taskList) {
-      this.taskList = taskList;
-      this.btn = null;
-   }
+  constructor(taskList) {
+    this.taskList = taskList;
+    this.btn = null;
+  }
 
-   createButton() {
-      const deleteBtn = document.createElement("button");
-      deleteBtn.classList.add("delBtn");
-      deleteBtn.innerHTML = `<i class="far fa-trash-alt"></i>`;
-      deleteBtn.addEventListener("click", () => this.deleteTask(this.taskList));
+  createButton() {
+    const deleteBtn = document.createElement("button");
+    deleteBtn.classList.add("delBtn");
+    deleteBtn.innerHTML = `<i class="far fa-trash-alt"></i>`;
+    deleteBtn.addEventListener("click", () => this.deleteTask(this.taskList));
 
-      this.btn = deleteBtn;
-      return deleteBtn;
-   }
+    this.btn = deleteBtn;
+    return deleteBtn;
+  }
 
-   deleteTask() {
-      const task = this.btn.closest(".task");
-      const taksIndex = task.dataset.index;
-      task.remove();
-      this.taskList.splice(taksIndex, 1);
-      this.setNewDataIndex();
-   }
+  deleteTask() {
+    const task = this.btn.closest(".task");
+    const taksIndex = task.dataset.index;
+    task.remove();
+    this.taskList.splice(taksIndex, 1);
+    this.setNewDataIndex();
+  }
 
-   setNewDataIndex() {
-      const tasks = document.querySelectorAll(".right .task");
-      tasks.forEach((task, index) => (task.dataset.index = index));
-   }
+  setNewDataIndex() {
+    const tasks = document.querySelectorAll(".task-contener .task");
+    tasks.forEach((task, index) => (task.dataset.index = index));
+  }
 }

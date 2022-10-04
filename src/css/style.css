@@ -1,147 +1,137 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&family=Tapestry&display=swap);
 body {
-   margin: 0 20px;
-   font-family: "Roboto Flex", sans-serif;
-   overflow-x: hidden;
-   background-color: rgb(185, 185, 185);
+  margin: 0 20px;
+  font-family: "Roboto Flex", sans-serif;
+  overflow-x: hidden;
+  background-color: rgb(128, 128, 128);
+}
+
+section {
+  width: 60%;
+  margin: 0 auto;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-form {
+  width: 100%;
+  flex-basis: 20vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.user-form .title-input {
+  width: 75%;
+}
+
+.user-form .addTask {
+  width: 20%;
+}
+
+input {
+  margin: 10px 0;
+  height: 35px;
+}
+
+textarea {
+  height: 100px;
+}
+
+textarea,
+.date-input {
+  width: 100%;
+  resize: none;
 }
 
 input:focus,
 textarea:focus {
-   outline: none;
-   box-shadow: none;
-   border: 2px solid rgb(0, 174, 255);
-}
-
-section {
-   display: flex;
-   justify-content: space-between;
-   width: 100vw;
-   height: 100vh;
-}
-
-section > div {
-   width: 48%;
-}
-
-section input,
-section textarea {
-   width: 99%;
-   margin-bottom: 20px;
-   background-color: rgb(185, 185, 185);
-   resize: vertical;
-   outline: none;
-   border: none;
-   box-shadow: inset 0.1em 0.1em 0.5em -0.2em black;
-}
-
-section textarea {
-   height: 150px;
-}
-
-section input {
-   height: 40px;
-}
-
-.left p {
-   margin-bottom: 0;
-   color: rgb(0, 0, 0);
-}
-
-.left .main {
-   width: 100%;
-}
-
-.right {
-   position: relative;
-   left: -20px;
-   overflow-y: auto;
-   overflow-x: hidden;
+  outline: none;
+  box-shadow: none;
+  border: 2px solid purple;
 }
 
 .task {
-   margin: 30px auto 0 auto;
-   width: 90%;
-   box-shadow: inset 0.1em 0.1em 0.5em -0.2em black;
-   background-color: rgb(177, 177, 177);
-   border-radius: 2%;
-   overflow: hidden;
-   animation: animate 1s 0s both alternate;
-   padding: 10px 20px;
+  margin: 30px auto 0 auto;
+  width: 90%;
+  box-shadow: inset 0.1em 0.1em 0.5em -0.2em black;
+  background-color: rgb(177, 177, 177);
+  border-radius: 2%;
+  overflow: hidden;
+  animation: animate 1s 0s both alternate;
+  padding: 10px 20px;
 }
 
 .task-contener {
-   margin: 1.2rem;
-   height: 170px;
+  margin: 1.2rem;
+  height: 170px;
 }
 
 .task header {
-   display: flex;
-   justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .task h2 {
-   margin: 2rem 0;
+  margin: 2rem 0;
 }
 
 .editBtn,
 .delBtn {
-   width: 30px;
-   height: 30px;
-   padding: 0;
-   background-color: rgba(240, 248, 255, 0);
-   border: none;
-   cursor: pointer;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background-color: rgba(240, 248, 255, 0);
+  border: none;
+  cursor: pointer;
 }
 
 button i {
-   font-size: 22px;
-   color: black;
-   width: 100%;
-   height: 100%;
+  font-size: 22px;
+  color: black;
+  width: 100%;
+  height: 100%;
 }
 
 .edit {
-   height: 390px;
+  height: 390px;
 }
 
 .addTask,
 .canel,
 .save {
-   width: 100px;
-   height: 40px;
-   font-size: 18px;
-   background-color: whitesmoke;
-   border: 2px solid black;
-   border-radius: 5%;
-   transition: 0.1s background-color;
-}
-
-.addTask {
-   float: right;
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  background-color: whitesmoke;
+  border: 2px solid black;
+  border-radius: 5%;
+  transition: 0.1s background-color;
 }
 
 .canel {
-   margin-left: 10px;
-   color: silver;
-   border: 2px solid silver;
+  margin-left: 10px;
+  /* color: silver;
+  border: 2px solid silver; */
 }
 
 .editBtn {
-   margin-right: 10px;
+  margin-right: 10px;
 }
 
 .addTask:active,
 .save:active {
-   background-color: rgb(221, 221, 221);
+  /* background-color: rgb(221, 221, 221); */
 }
 
 @keyframes animate {
-   0% {
-      transform: translate(0, -40px);
-   }
+  0% {
+    transform: translate(0, -40px);
+  }
 
-   100% {
-      transform: translate(0);
-   }
+  100% {
+    transform: translate(0);
+  }
 }
