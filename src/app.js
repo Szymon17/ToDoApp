@@ -6,6 +6,7 @@ import { DeleteTask } from "./js/DeleteTask.js";
 
 class ToDo {
   constructor() {
+    this.app = document.querySelector(".ToDoApp");
     this.index = 0;
     this.tasks = [];
     this.btn = document.querySelector(".addTask");
@@ -20,7 +21,16 @@ class ToDo {
 
     this.user_params.date.value = this.todayDate;
 
+    this.bindEvents();
+    this.isFormActive();
+  }
+
+  bindEvents() {
     this.btn.addEventListener("click", this.addTask.bind(this));
+
+    document.addEventListener("keypress", e => {
+      if (e.key === "Enter") this.addTask();
+    });
   }
 
   addTask() {
@@ -38,6 +48,7 @@ class ToDo {
     this.user_params.title.value = "";
     this.user_params.content.value = "";
     this.user_params.date.value = this.todayDate;
+    this.setUserFormDeactive();
   }
 
   newHtml() {
@@ -46,7 +57,7 @@ class ToDo {
     task.dataset.index = this.tasks.length;
 
     const taskCnt = document.createElement("div");
-    taskCnt.classList.add("task-contener");
+    taskCnt.classList.add("contener");
 
     const header = document.createElement("header");
 
@@ -77,6 +88,22 @@ class ToDo {
     task.append(taskCnt);
 
     return task;
+  }
+
+  setUserFormActive() {
+    this.app.classList.add("active");
+  }
+
+  setUserFormDeactive() {
+    this.app.classList.remove("active");
+  }
+
+  isFormActive() {
+    const userForm = document.querySelector(".user-form");
+
+    this.user_params.title.addEventListener("click", () => this.setUserFormActive());
+    userForm.addEventListener("mousedown", e => e.stopImmediatePropagation());
+    document.addEventListener("mousedown", () => this.setUserFormDeactive());
   }
 }
 

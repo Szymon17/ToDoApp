@@ -28,11 +28,12 @@ export class EditTask {
 
   editTask() {
     this.task = this.btn.closest(".task");
-    const form = document.querySelector(".user-form form").cloneNode(true);
+    const form = document.querySelector(".user-form").cloneNode(true);
     const clonedTask = this.task.firstChild.cloneNode(true);
     const oldButtons = this.task.querySelector(".buttons");
 
     form.querySelector(".addTask").remove();
+    console.log(form);
     this.setEditFormContent(form);
 
     this.task.textContent = "";

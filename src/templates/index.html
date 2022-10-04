@@ -8,17 +8,16 @@
     <title>toDo</title>
   </head>
   <body>
-    <section>
+    <section class="ToDoApp">
       <div class="user-form">
-        <form>
-          <input value="" class="title-input" />
+        <div class="user-form-title">
+          <input type="text" value="" class="title-input" placeholder="Tytuł zadania" />
           <button type="button" class="addTask">Dodaj</button>
-
-          <textarea cols="30" rows="10" value=""></textarea>
-
-          <input type="date" value="" class="date-input" />
-        </form>
+        </div>
+        <textarea cols="30" rows="10" value="" placeholder="Opis zadania"></textarea>
+        <input type="date" value="" class="date-input" />
       </div>
+
       <div class="task-contener"></div>
     </section>
   </body>

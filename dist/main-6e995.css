@@ -1,0 +1,168 @@
+@import url(https://fonts.googleapis.com/css2?family=Peralta&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Peralta", cursive;
+  overflow: hidden;
+  background-color: rgb(73, 73, 73);
+}
+
+.ToDoApp {
+  width: 80%;
+  max-width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 5vw;
+  padding-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(70, 70, 70);
+  box-shadow: 0 0 10px -5px black;
+}
+
+input,
+textarea,
+button {
+  padding: 5px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  font-family: "Peralta", cursive;
+  background-color: rgb(56, 56, 68);
+  color: white;
+}
+
+textarea {
+  height: 100px;
+  padding: 10px;
+}
+
+textarea,
+.date-input {
+  width: 100%;
+  resize: none;
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button i {
+  font-size: 22px;
+  color: black;
+  width: 100%;
+  height: 100%;
+}
+
+input,
+.addTask {
+  margin: 10px 0;
+  height: 40px;
+}
+
+.addTask {
+  background-image: linear-gradient(90deg, rgba(0, 211, 255, 1) 0%, rgba(0, 91, 136, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.user-form {
+  width: 100%;
+  padding: 0 10px;
+  display: flex;
+  flex-basis: 20vh;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.user-form-title {
+  display: flex;
+}
+
+.user-form .title-input {
+  flex-grow: 3;
+}
+
+.user-form .addTask {
+  flex-grow: 1;
+}
+
+.ToDoApp.active textarea,
+.ToDoApp.active .date-input {
+  display: block;
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid purple;
+}
+
+/* task contener */
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.task-contener {
+  height: 100vh;
+  overflow-y: auto;
+  margin: 1.2rem;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.task-contener input,
+.task-contener textarea {
+  width: 100%;
+  display: block;
+}
+
+.task {
+  margin: 10px 0;
+  width: 100%;
+  max-height: 40vh;
+  padding: 30px;
+  background-color: rgb(34, 34, 41);
+  color: whitesmoke;
+  overflow: hidden;
+  animation: animate 1s 0s both alternate;
+}
+
+.task header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task h2 {
+  margin: 2rem 0;
+}
+
+.task .text {
+  word-wrap: break-word;
+}
+
+.editBtn {
+  margin-right: 10px;
+}
+
+.saveBtn {
+  margin-right: 5px;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(0, -40px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
