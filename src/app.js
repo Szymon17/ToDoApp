@@ -28,8 +28,9 @@ class ToDo {
   bindEvents() {
     this.btn.addEventListener("click", this.addTask.bind(this));
 
-    document.addEventListener("keypress", e => {
+    document.addEventListener("keydown", e => {
       if (e.key === "Enter") this.addTask();
+      else if (e.key === "Escape") this.setUserFormDeactive();
     });
   }
 
